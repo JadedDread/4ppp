@@ -1,0 +1,10 @@
+Feature: Withdraw cash
+
+  Scenario: Account has sufficient funds
+   Given the account balance is 50PLN
+     And the card is valid
+     And the machine contains enough money  
+    When the Account Holder requests 10PLN
+    Then the ATM should dispense 10PLN
+     And the account balance should be 40PLN
+     And the card should be returned
